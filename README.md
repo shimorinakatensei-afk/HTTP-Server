@@ -10,12 +10,14 @@ A lightweight HTTP server built from scratch in C++ using raw POSIX sockets — 
 
 ## Features
 
-- Accepts **GET requests** over TCP
-- Serves **static files** (HTML, CSS, JS, images)
-- Correct **MIME types** per file extension
-- **404 / 403 / 405** error responses
-- Protection against **path traversal** attacks (`../../etc/passwd`)
-- Zero dependencies — only POSIX sockets
+* Accepts **GET requests** over TCP
+* Serves **static files** (HTML, CSS, JS, images)
+* Correct **MIME types** per file extension
+* **404 / 403 / 405** error responses
+* Protection against **path traversal** attacks (`../../etc/passwd`)
+* **Multithreaded** — each connection handled in a separate `std::thread`
+* Thread ID logging for debugging concurrent connections
+* Zero dependencies — only POSIX sockets
 
 ---
 
