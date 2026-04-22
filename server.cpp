@@ -5,7 +5,7 @@
 #include <map>
 #include <cstring>
 
-// Network headers (Linux / macOS)
+// Network headers (Linux / macOS / Windows)
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
