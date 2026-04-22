@@ -1,6 +1,11 @@
 # 🚀 HTTP Server in C++
 
 A lightweight HTTP server built from scratch in C++ using raw POSIX sockets — no frameworks, no libraries.
+
+![C++](https://img.shields.io/badge/C++-17-blue?logo=c%2B%2B)
+![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 ---
 
 ## Features

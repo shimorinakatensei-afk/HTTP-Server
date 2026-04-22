@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How it works</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>How it works</h1>
+        <ol>
+            <li>Browser opens a TCP connection to port 8080</li>
+            <li>Sends a line: <code>GET /about.html HTTP/1.1</code></li>
+            <li>Server reads the request with <code>recv()</code></li>
+            <li>Finds the file on disk and reads it</li>
+            <li>Sends back an HTTP response with <code>send()</code></li>
+        </ol>
+        <nav>
+            <a href="/">Back</a>
+        </nav>
+    </div>
+</body>
+</html>
