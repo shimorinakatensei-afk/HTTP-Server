@@ -170,6 +170,7 @@ int main() {
         handle_client(client_fd);
     }
 
+    
     close(server_fd);
     return 0;
 }
