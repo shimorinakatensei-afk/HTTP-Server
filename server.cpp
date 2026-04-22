@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <thread>
 #include <sstream>
 #include <string>
 #include <map>
@@ -167,7 +168,7 @@ int main() {
         int client_fd = accept(server_fd, (sockaddr*)&client_addr, &client_len);
         if (client_fd < 0) { perror("accept"); continue; }
 
-        handle_client(client_fd);
+        std::thread(handle_client, client_fd).detach();
     }
 
     
