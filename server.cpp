@@ -5,6 +5,7 @@
 #include <string>
 #include <map>
 #include <cstring>
+#include <mutex>
 
 // Network headers (Linux / macOS / Windows)
 #include <sys/socket.h>
@@ -80,6 +81,8 @@ std::string error_page(int code, const std::string& reason) {
 
 // Handle a single client connection
 void handle_client(int client_fd) {
+    std::cout << "[THREAD] Started, fd=" << client_fd 
+              << " thread=" << std::this_thread::get_id() << "\n";
     char buf[4096] = {};
     ssize_t n = recv(client_fd, buf, sizeof(buf) - 1, 0);
     if (n <= 0) { close(client_fd); return; }
